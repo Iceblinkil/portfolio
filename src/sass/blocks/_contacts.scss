@@ -1,6 +1,45 @@
 .contacts {
-    padding-top: 125px;
+    padding: 125px 0 90px 0;
     &__wrapper {
         display: grid;
+        padding: 0 35px 0 52px;
+        grid-template-columns: 400px 585px;
+        justify-content: space-between;
+    }
+    &__photo {
+        img {
+            width: 100%;
+        }
+    }
+    &__descr {
+        padding-top: 6px;
+        .divider {
+            margin: 0;
+        }
+    }
+    &__title {
+        position: relative;
+        padding: 1px 0 0 12px;
+        @include before_circle;
+        &:before {
+            left: 0;
+        }
+    }
+    &__text, &__social {
+        margin-top: 20px;
+    }
+    &__link {
+        margin-right: 25px;
+        img {
+            max-width: 30px;
+            min-height: 30px;
+            transition: 0.6s all;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
