@@ -8,8 +8,19 @@
     .container {
         max-width: 960px;
     }
-    .sidepanel {
-        display: none;
+    .about {
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+        }
+        &__skills {
+            column-gap: 20px;
+            grid-template: repeat(2, minmax(115px, auto))/repeat(2,250px);
+            &-item {
+                column-gap:15px;
+                grid-template-columns: 40px 195px;
+            }
+        }
     }
 }
 
