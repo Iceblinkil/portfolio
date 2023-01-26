@@ -177,25 +177,46 @@
     }
     .contacts {
         &__wrapper {
+            padding: 0 10px;
             grid-template-columns: repeat(auto-fit, 400px);
             justify-content: center;
             grid-row: unset;
             grid-column: unset;
+            text-align: center;
         }
         &__form {
-            grid-template-columns: 300px;
-            justify-content: space-between;
-            grid-row: unset;
+            // grid-template: 45px 190px 45px / repeat(2, 280px);
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-template-rows: 45px 45px 190px ;
+            justify-content: center;
+        }
+        &__title {
+            &::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__divider {
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+        }
+        &__subtitle {
+            margin-bottom: 10px;
+        }
+        &__textarea {
             grid-column: unset;
         }
         &__triggers {
             grid-template-columns: repeat(auto-fit, 200px);
+            grid-column: unset;
             justify-content: center;
         }
         &__btn {
-            margin-bottom: 20px;
-            font-size: 14px;
+            margin-top: 20px;
+            font-size: 12px;
             line-height: 21px;
+            grid-row-start: 2;
         }
         .about__photo {
             display: none;
@@ -265,6 +286,11 @@
             &-line {
                 width: 250px;
             }
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 300px);
         }
     }
 }
